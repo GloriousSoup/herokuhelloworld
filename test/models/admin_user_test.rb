@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class AdminUserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "creation" do
+    c = AdminUser.new
+    c.email = "user@example.com"
+    c.password = "password"
+    assert c.save
+  end
 end
